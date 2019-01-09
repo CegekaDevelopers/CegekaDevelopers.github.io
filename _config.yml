@@ -8,6 +8,9 @@ plugins: [jekyll-paginate]
 paginate: 16
 paginate_path: "/page:num"
 
+# Google Analytics
+google_analytics: UA-132033429-1
+
 
 defaults:
   - scope:
