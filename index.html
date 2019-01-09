@@ -1,0 +1,75 @@
+---
+title: Cegeka Developers Blog
+
+haslink: true
+link: Lees onze blog
+---
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" id="hs_cos_wrapper_widget_1523272946252" style="" data-hs-cos-type="module" data-hs-cos-general-type="widget">
+    <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" id="hs_cos_wrapper_widget_1523272946252_" style="" data-hs-cos-type="rich_text" data-hs-cos-general-type="widget">
+        <div class="section-block pb-20">
+            <div class="row">
+                <div class="column width-9 tmh-perspective">
+                    <h2 class="weight-thin font-alt-1 color-charcoal horizon" style="transition:; visibility: visible; opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1); transform-origin: 50% 50% 0px; backface-visibility: hidden;" data-animate-in="preset:slideInUpShort;duration:800ms;">Volg hier alles vanuit het <strong>Cegeka</strong> standpunt en ontdek ons verhaal.</h2>
+                </div>
+            </div>
+        </div>
+    </span>
+</div>
+
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" id="hs_cos_wrapper_widget_1523274656429" style="" data-hs-cos-type="module" data-hs-cos-general-type="widget">
+    <div class="section-block pt-40" id="offering">
+        <div class="row flex boxes full-width">
+            {% for post in paginator.posts %}
+                <div class="solution-columns-home column width-3 post-box">
+                    <a class="box xlarge bkg-cegeka-dark-blue color-white" class="blog-title" href="{{ post.url }}">
+                        <p class="lead weight-semi-bold">{{ post.title }}</p>
+                        <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 256 }}</p>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="pagination">
+            {% if paginator.previous_page %}
+                <a href="{{ paginator.previous_page_path }}" class="bkg-cegeka-dark-turquoise color-white page_button">
+                    Vorige
+                </a>
+            {% else %}
+                <span class="bkg-charcoal-light color-white selected_page_button">Vorige</span>
+            {% endif %}
+            <div class="page_number">{{ paginator.page }} van {{ paginator.total_pages }}</div>
+            {% if paginator.next_page %}
+                <a href="{{ paginator.next_page_path }}" class="bkg-cegeka-dark-turquoise color-white page_button">
+                    Volgende
+                </a>
+            {% else %}
+                <span class="bkg-charcoal-light color-white selected_page_button">Volgende</span>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" id="hs_cos_wrapper_widget_1527075758912" style="" data-hs-cos-type="module" data-hs-cos-general-type="widget">
+    <section class="section-block feature-3 pb-mobile-20 pt-mobile-20 color-white bkg-cegeka-red">
+        <div class="row">
+            <div class="column width-9 tmh-perspective">
+                <h2 class="weight-thin font-alt-1 color-charcoal horizon" style="transition:; visibility: visible; opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1); transform-origin: 50% 50% 0px; backface-visibility: hidden;" data-animate-in="preset:slideInUpShort;duration:800ms;">Categorieën</h2>
+            </div>
+        </div>
+        
+        <div class="row flex">
+            <div class="column width-8 offset-2">
+                <div class="feature-content">
+                    <div class="feature-content-inner center-on-mobile pt-40 pt-mobile-20">
+                        <div class="row flex category-list">
+                            {% for category in site.category %}
+                                <h3 class="column width-4 weight-thin font-alt-1 horizon" style="transition:; visibility: visible; opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1); transform-origin: 50% 50% 0px; backface-visibility: hidden;" data-animate-in="preset:slideInUpShort;duration:800ms;">
+                                    <a href="{{ category.url }}">{{ category.title }}</a>
+                                </h3>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

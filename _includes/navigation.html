@@ -1,0 +1,20 @@
+<nav class="navigation nav-block primary-navigation nav-right primary-navigation-transparent hide-on-mobile hidden-md hidden-sm hidden-xs no-transition">
+    <ul>
+        {% for item in site.data.navigation %}
+            <li class="hs-menu-item hs-menu-depth-1">
+                <a role="menuitem" href="{{ item.link }}">
+                    {{ item.name }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>
+<nav class="navigation nav-block secondary-naviagation nav-right visible-md visible-sm visible-xs no-transition">
+    <ul>
+        <li class="aux-navigation">
+            <a class="navigation-show nav-icon" href="#my-menu-head">
+                <span class="icon-menu"></span>
+            </a>
+        </li>
+    </ul>
+</nav>

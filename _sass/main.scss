@@ -1,0 +1,66 @@
+.post-box a:hover,
+.member-box a:hover,
+.category-list a:hover {
+    color: black;
+}
+
+.post-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.post-content p img {
+    width: 50%;
+    margin: 0 25%;
+}
+
+.pagination {
+    width: 20%;
+    min-width: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagination .selected_page_button,
+.pagination .page_button {
+    min-width: 150px;
+    padding: 1.3rem 2.5rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.pagination .selected_page_button {
+    opacity: 0.3;
+}
+
+.pagination .page_button:hover {
+    color: black;
+}
+
+.pagination .page_number {
+    padding: 1.3rem 2.5rem;
+    min-width: 100px;
+    text-align: center;
+}
+
+#disqus_thread {
+    width: 100%;
+}
+
+#disqus_thread iframe {
+    background-color: inherit;
+}
+
+@media only screen and (min-width: 960px) {
+    header {
+        background-color: #0d435a;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .pagination {
+        flex-direction: column;
+    }
+}

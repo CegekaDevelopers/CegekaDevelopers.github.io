@@ -1,0 +1,57 @@
+---
+layout: default
+---
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" id="hs_cos_wrapper_widget_1523272946252" style="" data-hs-cos-type="module" data-hs-cos-general-type="widget">
+    <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" id="hs_cos_wrapper_widget_1523272946252_" style="" data-hs-cos-type="rich_text" data-hs-cos-general-type="widget">
+        <div class="section-block pb-20">
+            <div class="row">
+                <div class="column width-8 offset-2 tmh-perspective">
+                    <p class="weight-thin font-alt-1 color-charcoal horizon" style="transition:; visibility: visible; opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1); transform-origin: 50% 50% 0px; backface-visibility: hidden;" data-animate-in="preset:slideInUpShort;duration:800ms;">{{ page.position }}</p>
+                </div>
+            </div>
+        </div>
+    </span>
+</div>
+
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" id="hs_cos_wrapper_widget_1519394672889" style="" data-hs-cos-type="module" data-hs-cos-general-type="widget">
+    <section>
+        <div class="section-block no-padding-top &#10; pb-110 pb-mobile-30">
+            <div class="row flex">
+                <div class="column width-2 offset-2 center">
+                    {% if page.profile-pic and page.profile-pic != "" and page.profile-pic != nil %}
+                        <img alt="profile_picture" src="{{ page.profile-pic }}">
+                    {% else %}
+                        <img alt="profile_picture" src="\assets\images\members\no_profile_pic.png">
+                    {% endif %}
+                </div>
+                <div class="column width-6 tmh-perspective">
+                    <div class="feature-column medium left horizon&#10;                        " style="transition:; visibility: visible; opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1); transform-origin: 50% 50% 0px; backface-visibility: hidden;" data-animate-in="preset:slideInUpShort;duration:1000ms;" data-threshold="1">
+                        {{ content }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" id="hs_cos_wrapper_widget_1527075758912" style="" data-hs-cos-type="module" data-hs-cos-general-type="widget">
+    <section class="section-block feature-3 pb-mobile-20 pt-mobile-20 color-white" style="background-color: #136f88;">
+        <div class="row flex">
+            <div class="column width-2 offset-1 center">
+                <h1 class="h2 color-white mb-20 weight-bold">Posts</h1>
+            </div>
+            <div class="column width-8">
+                <div class="feature-content">
+                    <div class="feature-content-inner center-on-mobile pt-40 pt-mobile-20">
+                        <ul class="post-list">
+                            {% assign filtered_posts = site.posts | where: 'author', page.short_name %}
+                            {% for post in filtered_posts %}
+                                <li class="post-box"><a href="{{ post.url }}">{{ post.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

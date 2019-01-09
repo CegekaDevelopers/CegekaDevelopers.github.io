@@ -1,0 +1,31 @@
+collections:
+  team-members:
+    output: true
+  category:
+    output: true
+
+plugins: [jekyll-paginate]
+paginate: 16
+paginate_path: "/page:num"
+
+
+defaults:
+  - scope:
+      path: ""
+      type: "team-members"
+    values:
+      layout: "member"
+  - scope:
+      path: ""
+      type: "category"
+    values:
+      layout: "category"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"

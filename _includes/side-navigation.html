@@ -1,0 +1,18 @@
+<nav class="mm-menu mm-offcanvas mm-right mm-pagedim-black" id="my-menu-head" aria-hidden="">
+    <div class="mm-panels">
+        <div class="mm-panel mm-hasnavbar mm-opened" id="mm-0">
+            <div class="mm-navbar">
+                <a class="mm-title">Cegeka Blog</a>
+            </div>
+            <ul class="mm-listview">
+                {% for item in site.data.navigation %}
+                    <li class="hs-menu-item hs-menu-depth-1">
+                        <a role="menuitem" href="{{ item.link }}">
+                            {{ item.name }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</nav>

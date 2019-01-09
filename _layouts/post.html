@@ -1,0 +1,66 @@
+---
+layout: default
+---
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" id="hs_cos_wrapper_widget_1523272946252" style="" data-hs-cos-type="module" data-hs-cos-general-type="widget">
+    <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" id="hs_cos_wrapper_widget_1523272946252_" style="" data-hs-cos-type="rich_text" data-hs-cos-general-type="widget">
+        <div class="section-block pb-20">
+            <div class="row">
+                <div class="column width-9 tmh-perspective">
+                    <p class="weight-thin font-alt-1 color-charcoal horizon" style="transition:; visibility: visible; opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1); transform-origin: 50% 50% 0px; backface-visibility: hidden;" data-animate-in="preset:slideInUpShort;duration:800ms;">
+                        {{ page.date | date_to_string }}
+                        {% assign author = site.team-members | where: 'short_name', page.author | first %}
+                        {% if author %}
+                            - <a href="{{ author.url }}">{{ author.name }}</a>
+                        {% else %}
+                            -   {{ page.author }}
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </span>
+</div>
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" id="hs_cos_wrapper_widget_1519394672889" style="" data-hs-cos-type="module" data-hs-cos-general-type="widget">
+    <section>
+        <div class="section-block no-padding-top &#10; pb-110 pb-mobile-30">
+            <div class="row flex">
+                <div class="column tmh-perspective post-content" style="transition:; visibility: visible; opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1); transform-origin: 50% 50% 0px; backface-visibility: hidden;">
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" id="hs_cos_wrapper_widget_1527075758912" style="" data-hs-cos-type="module" data-hs-cos-general-type="widget">
+    <section class="section-block feature-3 pb-mobile-20 pt-mobile-20 color-white bkg-cegeka-red">
+        <div class="row">
+            <div class="column width-9 tmh-perspective">
+                <h2 class="weight-thin font-alt-1 color-charcoal horizon" style="transition:; visibility: visible; opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1); transform-origin: 50% 50% 0px; backface-visibility: hidden;" data-animate-in="preset:slideInUpShort;duration:800ms;">Categorieën</h2>
+            </div>
+        </div>
+        
+        <div class="row flex">
+            <div class="column width-8 offset-2">
+                <div class="feature-content">
+                    <div class="feature-content-inner center-on-mobile pt-40 pt-mobile-20">
+                        <div class="row flex category-list">
+                            {% for category in page.categories %}
+                                {% assign cat = site.category | where: 'category', category | first %}
+                                {% if cat %}
+                                    <h3 class="column width-4 weight-thin font-alt-1 horizon" style="transition:; visibility: visible; opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1); transform-origin: 50% 50% 0px; backface-visibility: hidden;" data-animate-in="preset:slideInUpShort;duration:800ms;">
+                                        <a href="{{ cat.url }}">{{ cat.title }}</a>
+                                    </h3>
+                                {% else %}
+                                    <h3 class="column width-4 weight-thin font-alt-1 horizon" style="transition:; visibility: visible; opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1); transform-origin: 50% 50% 0px; backface-visibility: hidden;" data-animate-in="preset:slideInUpShort;duration:800ms;">
+                                        {{ category }}
+                                    </h3>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% include comments.html %}
