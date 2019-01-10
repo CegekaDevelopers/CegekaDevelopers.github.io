@@ -23,7 +23,8 @@ link: Lees onze blog
                 <div class="solution-columns-home column width-3 post-box">
                     <a class="box xlarge bkg-cegeka-dark-blue color-white" class="blog-title" href="{{ post.url }}">
                         <p class="lead weight-semi-bold">{{ post.title }}</p>
-                        <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 256 }}</p>
+                        <p class="weight-thin">{{ post.date | date_to_string }}</p>
+                        <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 128 }}</p>
                     </a>
                 </div>
             {% endfor %}
